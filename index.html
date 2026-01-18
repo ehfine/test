@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交友平台</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .profile-card {
+            background: #1e1e1e;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .feature-card {
+            background: #1e1e1e;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn {
+            background: #e91e63;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #999;
+            font-size: 12px;
+            border-top: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">交友平台</div>
+            <button class="btn">立即注册</button>
+        </div>
+        
+        <div class="main-content">
+            <div class="profile-card">
+                <h3>用户资料</h3>
+                <p>年龄：25岁 | 身高：165cm | 爱好：旅行、音乐</p>
+                
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>年龄范围：</label>
+                        <select>
+                            <option>18-25岁</option>
+                            <option>26-35岁</option>
+                            <option>35岁以上</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>兴趣爱好：</label>
+                        <select>
+                            <option>运动健身</option>
+                            <option>美食探店</option>
+                            <option>摄影旅游</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button class="btn">开始匹配</button>
+            </div>
+            
+            <div class="user-image">
+                <img src="user-avatar.jpg" alt="用户头像" style="width: 300px; height: 400px; object-fit: cover;">
+            </div>
+        </div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="photo1.jpg" alt="照片1">
+            </div>
+            <div class="gallery-item">
+                <img src="photo2.jpg" alt="照片2">
+            </div>
+            <div class="gallery-item">
+                <img src="photo3.jpg" alt="照片3">
+            </div>
+            <div class="gallery-item">
+                <img src="photo4.jpg" alt="照片4">
+            </div>
+            <div class="gallery-item">
+                <img src="photo5.jpg" alt="照片5">
+            </div>
+            <div class="gallery-item">
+                <img src="photo6.jpg" alt="照片6">
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature-card">
+                <div>🔥</div>
+                <div>
+                    <h4>智能匹配</h4>
+                    <p>基于兴趣爱好精准推荐</p>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div>🔒</div>
+                <div>
+                    <h4>隐私保护</h4>
+                    <p>严格的数据加密机制</p>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div>✅</div>
+                <div>
+                    <h4>真实验证</h4>
+                    <p>实名认证确保真实性</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <div class="input-group">
+                <input type="text" placeholder="输入您的联系方式">
+            </div>
+            <button class="btn">立即加入</button>
+            <p>提示：请遵守相关法律法规，文明交流。</p>
+        </div>
+        
+        <div class="footer">
+            <p>© 2024 交友平台 | 使用条款 | 隐私政策</p>
+            <p>温馨提示：本平台倡导健康交友，反对任何形式的非法活动。</p>
+        </div>
+    </div>
+</body>
+</html>
