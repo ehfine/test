@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>遊戲角落｜玩家交流、攻略、開黑、組隊</title>
+  <meta name="description" content="台灣最大的遊戲玩家交流平台：原神、崩壞、英雄聯盟、APEX、Valorant、鳴潮、絕區零... 找隊友、發攻略、聊心得、開黑都在這裡！">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background: #0d0d0d;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    
+    /* 導航 */
+    header {
+      background: rgba(15,15,25,0.92);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #222;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #00d4ff;
+      letter-spacing: 1px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      color: #00d4ff;
+    }
+    .btn {
+      background: #00d4ff;
+      color: #000;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+    .btn:hover {
+      background: #00b8e0;
+      transform: translateY(-1px);
+    }
+    
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+                  url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat;
+      padding: 140px 0 100px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      margin-bottom: 20px;
+      color: #fff;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+    }
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 720px;
+      margin: 0 auto 40px;
+      color: #ccc;
+    }
+    
+    /* 熱門遊戲 */
+    .section-title {
+      font-size: 2.2rem;
+      text-align: center;
+      margin: 80px 0 50px;
+      color: #00d4ff;
+    }
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+    .game-card {
+      background: #1a1a2e;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.25s;
+      border: 1px solid #333;
+    }
+    .game-card:hover {
+      transform: translateY(-8px);
+      border-color: #00d4ff;
+      box-shadow: 0 12px 30px rgba(0,212,255,0.15);
+    }
+    .game-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+    .game-info {
+      padding: 16px;
+      text-align: center;
+    }
+    .game-info h3 {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+    .game-info .online {
+      color: #00ff9d;
+      font-size: 0.95rem;
+    }
+    
+    /* 最新貼文 */
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 24px;
+      margin-bottom: 100px;
+    }
+    .post-card {
+      background: #161624;
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid #2a2a3e;
+    }
+    .post-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #444;
+    }
+    .username { font-weight: 700; }
+    .time { color: #888; font-size: 0.9rem; }
+    .post-content { margin-bottom: 16px; }
+    .post-tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .tag {
+      background: #2a2a3e;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+    
+    footer {
+      background: #0a0a14;
+      padding: 60px 0 30px;
+      text-align: center;
+      border-top: 1px solid #222;
+    }
+    footer p { color: #666; margin-top: 20px; font-size: 0.95rem; }
+    
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero { padding: 100px 0 80px; }
+    }
+  </style>
+  <!-- TikTok Pixel Code Start -->
+
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+  ttq.load('D5P23LBC77U57PB57J70');
+  ttq.page();
+}(window, document, 'ttq');
+</script>
+<script>
+ // add this before event code to all pages where PII data postback is expected and appropriate 
+ttq.identify({
+	"email": "c65503895cd98351dfbfd97bea7e985fa9b237e8f54082e7f61edc9f024d14df", // string. The email of the customer if available. It must be hashed with SHA-256 on the client side.
+	"phone_number": "88b0e300a226433ad2d4429e99936d1e52c2b17dc61d30ff86906690704482ff", // string. The phone number of the customer if available. It must be hashed with SHA-256 on the client side.
+	"external_id": "cb6a9594b53f5e08b0f4b3614373ba188fde0c4244cb1fc2e6b87b69ff05d8ae" // string. Any unique identifier, such as loyalty membership IDs, user IDs, and external cookie IDs.It must be hashed with SHA-256 on the client side.
+});
+
+ttq.track('ViewContent', {
+	"contents": [
+		{
+			"content_id": "1077218", // string. ID of the product. Example: "1077218".
+			"content_type": "product", // string. Either product or product_group.
+			"content_name": "shirt" // string. The name of the page or product. Example: "shirt".
+		}
+	],
+	"value": "100", // number. Value of the order or items sold. Example: 100.
+	"currency": "USD" // string. The 4217 currency code. Example: "USD".
+});
+
+ttq.track('Search', {
+	"contents": [
+		{
+			"content_id": "1077218", // string. ID of the product. Example: "1077218".
+			"content_type": "product", // string. Either product or product_group.
+			"content_name": "shirt" // string. The name of the page or product. Example: "shirt".
+		}
+	],
+	"value": "100", // number. Value of the order or items sold. Example: 100.
+	"currency": "USD", // string. The 4217 currency code. Example: "USD".
+	"search_string": "SAVE10COUPON" // string. The word or phrase used to search. Example: "SAVE10COUPON".
+});
+
+ttq.track('Contact', {
+	"contents": [
+		{
+			"content_id": "1077218", // string. ID of the product. Example: "1077218".
+			"content_type": "product", // string. Either product or product_group.
+			"content_name": "shirt" // string. The name of the page or product. Example: "shirt".
+		}
+	],
+	"value": "100", // number. Value of the order or items sold. Example: 100.
+	"currency": "USD" // string. The 4217 currency code. Example: "USD".
+});
+
+ttq.track('ClickButton', {
+	"contents": [
+		{
+			"content_id": "1077218", // string. ID of the product. Example: "1077218".
+			"content_type": "product", // string. Either product or product_group.
+			"content_name": "shirt" // string. The name of the page or product. Example: "shirt".
+		}
+	],
+	"value": "100", // number. Value of the order or items sold. Example: 100.
+	"currency": "USD" // string. The 4217 currency code. Example: "USD".
+});
+
+ttq.track('AddToWishlist', {
+	"contents": [
+		{
+			"content_id": "1077218", // string. ID of the product. Example: "1077218".
+			"content_type": "product", // string. Either product or product_group.
+			"content_name": "shirt" // string. The name of the page or product. Example: "shirt".
+		}
+	],
+	"value": "100", // number. Value of the order or items sold. Example: 100.
+	"currency": "USD" // string. The 4217 currency code. Example: "USD".
+});
+
+ttq.track('CompleteRegistration', {
+	"contents": [
+		{
+			"content_id": "1077218", // string. ID of the product. Example: "1077218".
+			"content_type": "product", // string. Either product or product_group.
+			"content_name": "shirt" // string. The name of the page or product. Example: "shirt".
+		}
+	],
+	"value": "100", // number. Value of the order or items sold. Example: 100.
+	"currency": "USD" // string. The 4217 currency code. Example: "USD".
+});
+
+ttq.track('Lead', {
+	"contents": [
+		{
+			"content_id": "1077218", // string. ID of the product. Example: "1077218".
+			"content_type": "product", // string. Either product or product_group.
+			"content_name": "shirt" // string. The name of the page or product. Example: "shirt".
+		}
+	],
+	"value": "100", // number. Value of the order or items sold. Example: 100.
+	"currency": "USD" // string. The 4217 currency code. Example: "USD".
+});
+</script>
+<!-- TikTok Pixel Code End -->
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">遊戲角落</div>
+      <div class="nav-links">
+        <a href="#">首頁</a>
+        <a href="#">熱門</a>
+        <a href="#">找隊友</a>
+        <a href="#">攻略</a>
+        <a href="#">開黑房</a>
+      </div>
+      <div>
+        <a href="#" class="btn">登入 / 註冊</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>這裡是玩家的主場</h1>
+    <p>找隊友・發攻略・聊 meta・曬戰績・開黑・組排・交流心得<br>超過 38,000 名活躍玩家正在這裡等你</p>
+    <a href="#" class="btn" style="font-size:1.3rem; padding:14px 40px;">立即加入討論</a>
+  </div>
+</section>
+
+<div class="container">
+
+  <h2 class="section-title">熱門遊戲</h2>
+  <div class="game-grid">
+    <div class="game-card">
+      <img src="https://images.unsplash.com/photo-1607853202273-797f1c22a915?auto=format&fit=crop&q=80&w=800" alt="原神">
+      <div class="game-info">
+        <h3>原神</h3>
+        <div class="online">2,847 人在線</div>
+      </div>
+    </div>
+    <div class="game-card">
+      <img src="https://images.unsplash.com/photo-1614680376408-81e91ffe3db7?auto=format&fit=crop&q=80&w=800" alt="Valorant">
+      <div class="game-info">
+        <h3>Valorant</h3>
+        <div class="online">1,932 人在線</div>
+      </div>
+    </div>
+    <div class="game-card">
+      <img src="https://images.unsplash.com/photo-1551103782-8b180bb7ecba?auto=format&fit=crop&q=80&w=800" alt="英雄聯盟">
+      <div class="game-info">
+        <h3>英雄聯盟</h3>
+        <div class="online">4,128 人在線</div>
+      </div>
+    </div>
+    <div class="game-card">
+      <img src="https://images.unsplash.com/photo-1600861194802-a25a4d255a0e?auto=format&fit=crop&q=80&w=800" alt="Apex Legends">
+      <div class="game-info">
+        <h3>Apex Legends</h3>
+        <div class="online">1,204 人在線</div>
+      </div>
+    </div>
+    <!-- 你可以繼續增加遊戲卡片 -->
+  </div>
+
+  <h2 class="section-title">最新貼文</h2>
+  <div class="posts-grid">
+    <div class="post-card">
+      <div class="post-header">
+        <div class="avatar"></div>
+        <div>
+          <div class="username">阿肥想上分</div>
+          <div class="time">15 分鐘前</div>
+        </div>
+      </div>
+      <div class="post-content">
+        現在真的還有玩鳴潮的嗎？<br>想找固定隊伍打深淵T0～T1，有大佬帶一下嗎QQ
+      </div>
+      <div class="post-tags">
+        <span class="tag">#鳴潮</span>
+        <span class="tag">#找隊友</span>
+        <span class="tag">#深淵</span>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-header">
+        <div class="avatar"></div>
+        <div>
+          <div class="username">0命香菱天下第一</div>
+          <div class="time">28 分鐘前</div>
+        </div>
+      </div>
+      <div class="post-content">
+        4.4版本香菱配隊總整理（個人使用心得）<br>班尼特+香菱+夜蘭+鍾離 目前輸出最高一隊
+      </div>
+      <div class="post-tags">
+        <span class="tag">#原神</span>
+        <span class="tag">#香菱</span>
+        <span class="tag">#配隊</span>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-header">
+        <div class="avatar"></div>
+        <div>
+          <div class="username">VCT anti</div>
+          <div class="time">1 小時前</div>
+        </div>
+      </div>
+      <div class="post-content">
+        今天VCT Pacific真的笑死，誰能想到會是這種比分...<br>有沒有一起一起一起一起一起一起一起一起噴的QQ
+      </div>
+      <div class="post-tags">
+        <span class="tag">#Valorant</span>
+        <span class="tag">#VCT</span>
+        <span class="tag">#賽事</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="container">
+    <h2 style="font-size:1.8rem; margin-bottom:20px;">加入遊戲角落</h2>
+    <p>與數萬名玩家一起討論、組隊、成長</p>
+    <br><br>
+    <p>&copy; 2026 遊戲角落｜純玩家交流社區｜非官方粉絲站</p>
+  </div>
+</footer>
+
+</body>
+</html>
