@@ -27,7 +27,7 @@
     <script>
       function addLine(){
         fbq('track', 'Contact');
-        const lineUrl = "https://line.me/ti/p/~yq5ku";
+        const lineUrl = "https://line.me/ti/p/~na8ys";
         window.open(lineUrl, '_blank');
       }
     </script>
@@ -142,7 +142,7 @@ ttq.track('Lead', {
 <body>
     <header class="site-header">
       <div class="container header__inner">
-        <a id="headerLineCta" class="btn btn--line" href="#" data-line-url="https://line.me/ti/p/~yq5ku" onclick="addLine()">
+        <a id="headerLineCta" class="btn btn--line" href="#" data-line-url="https://line.me/ti/p/~na8ys" onclick="addLine()">
           <img src="images/line.png" alt="LINE" class="btn-icon">立即配對
         </a>
       </div>
@@ -191,7 +191,7 @@ ttq.track('Lead', {
                 </div>
               </div>
               <div class="cta-panel__row" style="margin-top: 12px;">
-                <button id="btnLine" class="btn btn--primary btn--xl" data-line-url="https://line.me/ti/p/~yq5ku" onclick="addLine()">
+                <button id="btnLine" class="btn btn--primary btn--xl" data-line-url="https://line.me/ti/p/~na8ys" onclick="addLine()">
                   <img src="images/line.png" alt="LINE" class="btn-icon">回覆【約愛】立即 LINE 配對
                 </button>
               </div>
@@ -256,7 +256,7 @@ ttq.track('Lead', {
         <div class="container cta__card">
           <h2>準備好今晚來一場了嗎？💗</h2>
           <p>立即加入 LINE，開啟你的私密真實體驗。</p>
-          <button class="btn btn--primary btn--xl btn--pulse" data-line-url="https://line.me/ti/p/~yq5ku" onclick="addLine()">
+          <button class="btn btn--primary btn--xl btn--pulse" data-line-url="https://line.me/ti/p/~na8ys" onclick="addLine()">
             <img src="images/line.png" class="btn-icon">LINE 立即配對
           </button>
           <p class="hint">提醒：僅限成年人，所有互動皆須雙方自願並尊重彼此界線。</p>
