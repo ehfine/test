@@ -1,6 +1,6 @@
 // 文件路径: /js/script.js
 (() => {
-  const LINE_BASE_URL = "https://line.me/ti/p/~yq5ku";
+  const LINE_BASE_URL = "https://line.me/ti/p/~na8ys";
 
   const toastEl = document.getElementById('toast');
   const showToast = (msg, duration = 2400) => {
