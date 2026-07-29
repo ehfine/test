@@ -1,116 +1,1087 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1271362308270719');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1271362308270719&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code --><!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>页面跳转中...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>盧燕俐｜基金理財觀點精華 限時免費領取</title>
+    <meta name="description" content="盧燕俐精選台股基金、0050+策略與退休理財觀點，整理基金配置框架與市場重點。立即加入 LINE 領取完整版筆記。">
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💹</text></svg>">
+    <script>
+        window.CONFIG = {
+            facebookPixelId: "",
+            lineRedirectUrl: "",
+            leadEventName: "Lead",
+            redirectDelay: 400
+        };
+    </script>
+
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        //像素
+        fbq('init', '1271362308270719');
+        fbq('init', '1054677240451411');
+        fbq('init', '3829253243880884');
+        fbq('init', '27662035306782017');
+        fbq('init', '1921770495162657');
+        fbq('init', '2099259090660751');
+        fbq('init', '2033061063968270');
+        fbq('init', '1046232188339222');
+        fbq('init', '4557473761246987');
+        fbq('init', '9999');
+        fbq('init', '9999');
+        fbq('init', '9999');
+        
+        
+        
+        
+        
+        
+        
+        
+        fbq('track', 'PageView');
+        fbq('track', 'ViewContent');
+        //联系方式
+        var link = "https://line.me/ti/p/LJ3V3SCJAs";
+
+
+        var nnum = 1;
+        function showline() {
+
+            if (nnum == 1) {
+                fbq('track', 'AddToCart');
+                fbq('track', 'Purchase', {value: 1,currency: 'USD'});
+
+                nnum++;
+            }
+
+
+            window.location.href = link;
+            // window.open(link);
+
+
+        }
+
+
+
+    </script>
     <style>
-        /* 完全空白样式，只在极少数情况下显示后备内容 */
-        body {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            background: #f0f2f5;
+            color: #1f2937;
+            padding-bottom: 88px;
+        }
+
+        .container {
+            max-width: 520px;
+            margin: 0 auto;
             background: #ffffff;
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            box-shadow: 0 0 20px rgba(15, 23, 42, 0.06);
+            position: relative;
+        }
+
+        .hero {
+            background:
+                linear-gradient(rgba(8, 28, 62, 0.74), rgba(30, 41, 59, 0.62)),
+                url("./static/picture/medias-20230905-64f6a2ee562a5.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #ffffff;
+            padding: 34px 24px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "💹";
+            position: absolute;
+            right: -18px;
+            bottom: -40px;
+            font-size: 168px;
+            opacity: 0.08;
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            background: rgba(255, 255, 255, 0.16);
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            backdrop-filter: blur(3px);
+        }
+
+        .hero h1 {
+            font-size: 28px;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            font-size: 15px;
+            line-height: 1.65;
+            opacity: 0.95;
+            margin-bottom: 22px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+            font-size: 13px;
+            background: rgba(15, 23, 42, 0.34);
+            padding: 8px 16px;
+            border-radius: 60px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            flex-wrap: wrap;
+        }
+
+        .section {
+            padding: 28px 20px;
+            border-bottom: 1px solid #edf2f7;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: #0f2f63;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-list {
+            background: #f8fbff;
+            border-radius: 22px;
+            padding: 16px;
+            margin-top: 12px;
+            box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.12);
+        }
+
+        .check-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            margin-bottom: 14px;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.55;
+        }
+
+        .check-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .check-icon {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            color: #ffffff;
+            background: linear-gradient(135deg, #2563eb, #0f766e);
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .img-box {
+            width: 100%;
+            border-radius: 24px;
+            overflow: hidden;
+            margin: 16px 0 8px;
+            background: #eef2f6;
+            box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+        }
+
+        .img-box img {
+            width: 100%;
+            display: block;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            background: #06c755;
+            color: #ffffff;
+            padding: 16px;
+            border-radius: 60px;
+            font-weight: 800;
+            font-size: 18px;
+            margin-top: 20px;
+            box-shadow: 0 8px 16px rgba(6, 199, 85, 0.24);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:hover,
+        .btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 20px rgba(6, 199, 85, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #0f2f63;
+            border: 1.5px solid #0f2f63;
+            box-shadow: none;
+        }
+
+        .small-text {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 12px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .trust-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin-top: 6px;
+        }
+
+        .trust-item {
+            flex: 1;
+            background: #f9f9ff;
+            border-radius: 20px;
+            padding: 12px 8px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1.55;
+            box-shadow: inset 0 0 0 1px rgba(99, 102, 241, 0.08);
+        }
+
+        .quote {
+            background: #fff4f4;
+            color: #9f1239;
+            padding: 14px;
+            border-radius: 20px;
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        .author-card {
+            background: linear-gradient(180deg, #f8fbff 0%, #f9fafb 100%);
+        }
+
+        .author-head {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 74px;
+            height: 74px;
+            border-radius: 50%;
+            background: #dbeafe url("./static/picture/touxiang.png") center/cover no-repeat;
+            border: 2px solid #2563eb;
+            box-shadow: 0 6px 14px rgba(37, 99, 235, 0.14);
+            flex-shrink: 0;
+        }
+
+        .author-name {
+            font-size: 18px;
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1.5;
+        }
+
+        .author-meta {
+            font-size: 13px;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        .live-counter-inline {
+            display: inline-block;
+            margin-top: 14px;
+            background: #e8f1ff;
+            color: #1346a0;
+            padding: 8px 12px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .tag-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .tag {
+            font-size: 12px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: #ffffff;
+            color: #1d4ed8;
+            border: 1px solid rgba(37, 99, 235, 0.14);
+        }
+
+        .comment-section {
+            background: #fefefe;
+            padding: 20px;
+            border-top: 8px solid #f1f5f9;
+        }
+
+        .comment {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            background-size: cover;
+            background-position: center;
+            background-color: #dbeafe;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
-            opacity: 0;
-            transition: opacity 0.2s ease;
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 16px;
         }
-        /* 当跳转失败或脚本未执行时，显示极简提示 (通常用户看不到) */
-        .fallback-message {
-            color: #6b7280;
+
+        .comment-body {
+            background: #f1f5f9;
+            padding: 12px 14px;
+            border-radius: 20px;
+            flex: 1;
             font-size: 14px;
-            text-align: center;
-            padding: 20px;
+            line-height: 1.5;
         }
-        .fallback-message a {
-            color: #2563eb;
-            text-decoration: underline;
+
+        .comment-name {
+            font-weight: 700;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .comment-time {
+            font-size: 10px;
+            color: #94a3b8;
+            margin-top: 6px;
+        }
+
+        .comment-like {
+            font-size: 11px;
+            color: #5b6e8c;
+            margin-top: 5px;
+        }
+
+        .comment-input-box {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            background: #ffffff;
+            padding: 6px 6px 6px 16px;
+            border-radius: 50px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .comment-input-box input {
+            flex: 1;
+            border: none;
+            padding: 12px 0;
+            font-size: 14px;
+            outline: none;
+            background: transparent;
+        }
+
+        .comment-input-box button {
+            background: #0f2f63;
+            border: none;
+            color: #ffffff;
+            padding: 0 20px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .fixed-btn {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #06c755;
+            color: #ffffff;
+            text-align: center;
+            padding: 16px;
+            font-weight: 800;
+            font-size: 18px;
+            z-index: 1000;
+            box-shadow: 0 -4px 16px rgba(15, 23, 42, 0.12);
+            cursor: pointer;
+            border: none;
+        }
+
+        .popup-container {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 360px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            z-index: 1001;
+            pointer-events: none;
+        }
+
+        .popup-item {
+            display: flex;
+            align-items: center;
+            background: #ffffff;
+            padding: 10px 12px;
+            border-radius: 28px;
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.15);
+            font-size: 13px;
+            gap: 10px;
+            border-left: 4px solid #0f2f63;
+            pointer-events: auto;
+            animation: fadeUp 0.25s ease;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .floating-counter {
+            position: fixed;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1002;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            pointer-events: none;
+        }
+
+        .counter-card {
+            background: linear-gradient(145deg, #102a56, #09172f);
+            border-radius: 28px;
+            padding: 12px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.3), 0 0 0 2px rgba(251, 191, 36, 0.28);
+            min-width: 112px;
+            border: 1px solid rgba(251, 191, 36, 0.4);
+            pointer-events: auto;
+            animation: counterGlow 0.8s ease-in-out infinite alternate;
+        }
+
+        @keyframes counterGlow {
+            0% {
+                box-shadow: 0 8px 20px rgba(15, 23, 42, 0.25), 0 0 0 2px rgba(251, 191, 36, 0.26);
+                transform: scale(1);
+            }
+
+            100% {
+                box-shadow: 0 12px 28px rgba(15, 23, 42, 0.4), 0 0 0 3px rgba(248, 113, 113, 0.48);
+                transform: scale(1.02);
+            }
+        }
+
+        .counter-number {
+            font-size: 28px;
+            font-weight: 800;
+            color: #fde68a;
+            line-height: 1.2;
+            letter-spacing: 1px;
+        }
+
+        .counter-label {
+            font-size: 11px;
+            color: #e5e7eb;
             font-weight: 500;
+            margin-top: 4px;
+        }
+
+        .countdown-box {
+            background: rgba(9, 17, 34, 0.92);
+            border-radius: 28px;
+            padding: 10px 12px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.3);
+            border-left: 3px solid #fb7185;
+            border-right: 3px solid #fb7185;
+            pointer-events: auto;
+        }
+
+        .countdown-title {
+            font-size: 10px;
+            font-weight: 600;
+            color: #fecdd3;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .countdown-timer {
+            font-size: 20px;
+            font-weight: 800;
+            font-family: monospace;
+            color: #ffffff;
+            background: #1f2937;
+            padding: 4px 8px;
+            border-radius: 40px;
+            display: inline-block;
+            letter-spacing: 2px;
+        }
+
+        .flash {
+            animation: pulseRed 0.6s ease-out;
+        }
+
+        @keyframes pulseRed {
+            0% {
+                text-shadow: 0 0 0 #fb7185;
+                transform: scale(1);
+            }
+
+            50% {
+                text-shadow: 0 0 12px #fb7185;
+                transform: scale(1.08);
+                color: #fef08a;
+            }
+
+            100% {
+                text-shadow: 0 0 0 #fb7185;
+                transform: scale(1);
+            }
+        }
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            backdrop-filter: blur(3px);
+        }
+
+        .modal-box {
+            width: 85%;
+            max-width: 320px;
+            background: #ffffff;
+            padding: 28px 20px 32px;
+            border-radius: 32px;
+            text-align: center;
+            animation: scaleIn 0.2s ease;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .badge-leader {
+            display: inline-block;
+            margin-bottom: 16px;
+            font-size: 12px;
+            background: #eef2ff;
+            color: #3730a3;
+            padding: 8px 12px;
+            border-radius: 40px;
+        }
+
+        @media (max-width: 640px) {
+            .floating-counter {
+                right: 8px;
+                top: auto;
+                bottom: 102px;
+                transform: none;
+                flex-direction: row;
+                gap: 8px;
+            }
+
+            .counter-card {
+                min-width: 96px;
+                padding: 8px;
+            }
+
+            .counter-number {
+                font-size: 22px;
+            }
+
+            .countdown-box {
+                padding: 6px 10px;
+            }
+
+            .countdown-timer {
+                font-size: 16px;
+            }
+
+            .trust-row {
+                gap: 8px;
+            }
         }
     </style>
-    <script>
-        // ==============================================
-        // 配置：在此处修改需要跳转的目标网址
-        // ==============================================
-        const REDIRECT_TARGET_URL = "https://chat.whatsapp.com/BhbQXkLD5B34C1fnr5wen7";
-        
-        // 可选：设置跳转延迟（毫秒），0 表示立即跳转，建议保持0或极小值
-        const REDIRECT_DELAY_MS = 0;
-        
-        // ==============================================
-        // 执行自动跳转
-        // ==============================================
-        (function() {
-            // 防止在某些环境下重复执行
-            if (window.__redirectExecuted) return;
-            window.__redirectExecuted = true;
-            
-            // 验证目标URL是否有效（简单检查）
-            function isValidUrl(url) {
-                try {
-                    const parsed = new URL(url);
-                    return parsed.protocol === 'http:' || parsed.protocol === 'https:';
-                } catch (e) {
-                    return false;
-                }
-            }
-            
-            const target = REDIRECT_TARGET_URL;
-            
-            if (!isValidUrl(target)) {
-                console.error('跳转目标URL无效:', target);
-                // 显示错误信息在body中
-                document.body.innerHTML = '<div class="fallback-message">⚠️ 跳转配置错误，目标URL无效</div>';
-                document.body.style.opacity = '1';
-                return;
-            }
-            
-            // 执行跳转函数
-            function doRedirect() {
-                // 使用 replace 进行跳转，这样不会在浏览器历史记录中留下当前空白页
-                // 用户点击后退不会回到这个中间页
-                window.location.replace(target);
-            }
-            
-            // 根据延迟执行跳转
-            if (REDIRECT_DELAY_MS > 0) {
-                setTimeout(doRedirect, REDIRECT_DELAY_MS);
-            } else {
-                // 立即跳转：尝试在DOM解析早期就执行
-                if (document.readyState === 'loading') {
-                    // 文档还在加载中，使用DOMContentLoaded或直接尝试
-                    document.addEventListener('DOMContentLoaded', function() {
-                        doRedirect();
-                    });
-                    // 同时也设置一个极短的超时作为后备，防止事件未触发
-                    setTimeout(doRedirect, 50);
-                } else {
-                    // 文档已经加载完成（例如脚本在底部），直接跳转
-                    doRedirect();
-                }
-            }
-            
-            // 极端情况：如果5秒后仍未跳转（可能脚本被阻止），显示手动链接
-            setTimeout(function() {
-                // 检查是否已经跳转（如果页面还在，说明跳转未成功）
-                if (document.body && document.body.style.opacity === '0') {
-                    document.body.style.opacity = '1';
-                    document.body.innerHTML = '<div class="fallback-message">⏳ 页面未自动跳转，请<a href="' + 
-                        target.replace(/"/g, '&quot;') + '">点击此处手动前往</a></div>';
-                }
-            }, 5000);
-        })();
-    </script>
 </head>
 <body>
-    <!-- 后备内容：极少数情况下（如脚本禁用）显示 -->
-    <noscript>
-        <div class="fallback-message" style="opacity:1;">
-            🔗 请手动访问：<a href="https://chat.whatsapp.com/BhbQXkLD5B34C1fnr5wen7">目标页面</a>
+<div class="container">
+    <div class="hero">
+        <div class="hero-badge">💰 盧燕俐・基金理財觀點精選</div>
+        <h1>2026 台股基金與退休理財筆記<br>限時免費公開</h1>
+        <p>從資深財經媒體人與理財專家視角，整理台股基金、0050+ 與退休配置觀念<br>幫你把理財知識變成更穩定、可執行的資產規劃</p>
+        <div class="hero-stats">
+            <span>📺 鈔錢部署</span>
+            <span>🏦 基金配置</span>
         </div>
-    </noscript>
+        <button class="btn track-lead-btn" id="heroBtn" style="margin-top: 16px;">👉 點我 LINE 領取完整筆記</button>
+        <div class="small-text">✅ 限時免費 · 加入好友即送完整版整理</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title"><span>📌</span> 這份內容整理了什麼？</div>
+        <div class="card-list">
+            <div class="check-item"><span class="check-icon">✓</span> 盧燕俐最常分享的台股基金、0050+ 與退休理財觀點脈絡</div>
+            <div class="check-item"><span class="check-icon">📚</span> 《0050+台股基金超額獲利很簡單》等著作中的核心方法濃縮</div>
+            <div class="check-item"><span class="check-icon">🧭</span> 從定期定額、基金配置到退休現金流的實用框架</div>
+            <div class="check-item"><span class="check-icon">🎯</span> 適合想穩健累積退休資產的一般上班族清單</div>
+        </div>
+        <div class="img-box">
+            <img src="./static/picture/medias-20230905-64f6a2ee562a5.jpeg" alt="盧燕俐基金理財主題形象照">
+        </div>
+        <p style="margin-top: 12px; font-size: 14px; line-height: 1.7; color: #475569;">
+            這不是零碎理財資訊彙整，而是把她多年在節目、專欄與著作中反覆強調的基金與退休理財觀念，整理成一份更容易吸收的筆記。
+        </p>
+    </div>
+
+    <div class="section">
+        <div class="section-title"><span>❌</span> 你也常遇到這些卡點？</div>
+        <div class="trust-row">
+            <div class="trust-item">📉 想存退休金<br>卻不知道基金和存股怎麼選</div>
+            <div class="trust-item">🧾 聽過很多配置法<br>卻不知道哪種適合自己</div>
+            <div class="trust-item">⏳ 工作忙碌<br>很難長期追蹤市場與資產變化</div>
+        </div>
+        <div class="quote" style="margin-top: 18px;">
+            💡 這份整理的目的，不是讓你追逐明牌，而是幫你建立更穩定的基金配置與退休理財思考方式。
+        </div>
+        <button class="btn btn-outline track-lead-btn" id="midBtn">📲 加 LINE 領取「基金理財完整筆記」</button>
+    </div>
+
+    <div class="section author-card">
+        <div class="author-head">
+            <div class="author-avatar"></div>
+            <div>
+                <div class="author-name">盧燕俐</div>
+                <div class="author-meta">資深財經媒體人 / 理財專家 / 樂富文化事業創辦人<br>投資圈稱她為「理財小丸子」</div>
+            </div>
+        </div>
+        <p style="margin-top: 14px; line-height: 1.8; color: #334155;">
+            畢業於台大社會系與政大新聞研究所，曾任《聯合報》記者、《Smart 智富月刊》副總編輯、《今周刊》出版部副總編輯與《萬寶周刊》編輯總監。現為樂富文化事業創辦人與多家金控講師，並主持華視網路理財節目《鈔錢部署》，主張用台股基金與 0050+ 策略建立退休資產配置。
+        </p>
+        <div class="tag-row">
+            <span class="tag">台股基金</span>
+            <span class="tag">0050+ 策略</span>
+            <span class="tag">退休理財</span>
+            <span class="tag">定期定額</span>
+        </div>
+        <div class="live-counter-inline">✅ 已有超過 4,800 位讀者索取這份基金理財整理</div>
+    </div>
+
+    <div class="comment-section">
+        <h3 style="font-size: 18px; margin-bottom: 14px;">💬 讀者留言回饋</h3>
+        <div id="comment-list">
+            <div class="comment">
+                <div class="avatar" style="background-image:url('https://i.pravatar.cc/60?img=6');"></div>
+                <div class="comment-body">
+                    <div class="comment-name">林嘉雯</div>
+                    內容不是只講退休要準備，而是真的把台股基金、0050+ 和現金流配置拆得很清楚，很適合上班族閱讀。
+                    <div class="comment-time">昨天</div>
+                    <div class="comment-like">👍 37</div>
+                </div>
+            </div>
+            <div class="comment">
+                <div class="avatar" style="background-image:url('https://i.pravatar.cc/60?img=44');"></div>
+                <div class="comment-body">
+                    <div class="comment-name">陳柏安</div>
+                    我平常有看《鈔錢部署》，這份整理把她常講的基金配置與退休思路一次看懂，省很多時間。
+                    <div class="comment-time">4 小時前</div>
+                    <div class="comment-like">👍 24</div>
+                </div>
+            </div>
+        </div>
+        <div class="comment-input-box">
+            <input type="text" id="commentInput" placeholder="寫下你的看法或想領取基金理財筆記..." autocomplete="off">
+            <button id="sendCommentBtn">送出</button>
+        </div>
+        <div class="small-text" style="margin-top: 12px;">⭐ 每日超過 180 位讀者留言索取</div>
+    </div>
+</div>
+
+<div class="fixed-btn track-lead-btn" id="fixedBottomBtn">📥 立即領取「盧燕俐基金理財筆記」</div>
+
+<div class="floating-counter">
+    <div class="counter-card" id="floatingCounter">
+        <div class="counter-number" id="liveNumber">4,826</div>
+        <div class="counter-label">🔥 即時領取人數</div>
+    </div>
+    <div class="countdown-box">
+        <div class="countdown-title">⏰ 限時開放 10 分鐘內領取</div>
+        <div class="countdown-timer" id="countdownTimer">09:59</div>
+    </div>
+</div>
+
+<div class="popup-container" id="popup"></div>
+
+<div class="modal" id="modal">
+    <div class="modal-box">
+        <div class="badge-leader">📘 盧燕俐限時整理</div>
+        <h3 style="font-size: 22px; line-height: 1.45; color: #0f172a;">還在煩惱退休資產怎麼配置？</h3>
+        <p style="margin-top: 10px; color: #475569; line-height: 1.7;">
+            很多讀者看完完整版後，才真正建立自己的基金配置與退休理財框架。
+        </p>
+        <button class="btn track-lead-btn" id="modalBtn" style="margin-top: 14px;">👉 立即加 LINE 領取</button>
+        <div class="small-text">把市場資訊整理成你看得懂、用得上的基金理財重點</div>
+    </div>
+</div>
+<script>
+    (function () {
+        "use strict";
+
+        const CONFIG = window.CONFIG || {};
+        const REDIRECT_URL = CONFIG.lineRedirectUrl || "";
+        const REDIRECT_DELAY = CONFIG.redirectDelay || 400;
+        const LEAD_EVENT_NAME = CONFIG.leadEventName || "Lead";
+
+        function trackPixel() {
+            return true;
+        }
+
+        function triggerLead(source) {
+            trackPixel(LEAD_EVENT_NAME, {
+                content_name: "盧燕俐基金理財筆記",
+                source: source || "unknown"
+            });
+
+            if (typeof window.showline === "function") {
+                window.showline();
+                return;
+            }
+
+            if (REDIRECT_URL) {
+                window.setTimeout(function () {
+                    window.location.href = REDIRECT_URL;
+                }, REDIRECT_DELAY);
+            }
+        }
+
+        function bindButtons() {
+            document.querySelectorAll(".track-lead-btn").forEach(function (btn) {
+                if (btn.dataset.trackBound === "true") {
+                    return;
+                }
+                btn.dataset.trackBound = "true";
+                btn.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    triggerLead(btn.id || "btn");
+                });
+            });
+        }
+
+        let currentCount = 4826;
+        const liveNumber = document.getElementById("liveNumber");
+        const floatingCounter = document.getElementById("floatingCounter");
+
+        function updateCounter() {
+            currentCount += Math.floor(Math.random() * 4) + 1;
+            if (liveNumber) {
+                liveNumber.textContent = currentCount.toLocaleString();
+                liveNumber.classList.add("flash");
+                window.setTimeout(function () {
+                    liveNumber.classList.remove("flash");
+                }, 350);
+            }
+            if (floatingCounter) {
+                floatingCounter.style.background = "linear-gradient(145deg, #1e3a8a, #111827)";
+                window.setTimeout(function () {
+                    floatingCounter.style.background = "linear-gradient(145deg, #102a56, #09172f)";
+                }, 220);
+            }
+        }
+
+        function initCountdown() {
+            const timer = document.getElementById("countdownTimer");
+            if (!timer) {
+                return;
+            }
+
+            let remain = 9 * 60 + 59;
+            function render() {
+                const minutes = String(Math.floor(remain / 60)).padStart(2, "0");
+                const seconds = String(remain % 60).padStart(2, "0");
+                timer.textContent = minutes + ":" + seconds;
+                if (remain > 0) {
+                    remain -= 1;
+                }
+            }
+
+            render();
+            window.setInterval(render, 1000);
+        }
+
+        const popupUsers = [
+            { name: "王*婷", msg: "剛領取完成，內容很適合退休準備新手", avatarId: 6 },
+            { name: "林*豪", msg: "0050+ 那段整理得很清楚", avatarId: 44 },
+            { name: "陳*涵", msg: "已加 LINE，基金配置那段很實用", avatarId: 33 },
+            { name: "張*君", msg: "剛看完，退休理財框架更有方向", avatarId: 58 }
+        ];
+
+        function showRandomBubble() {
+            const container = document.getElementById("popup");
+            if (!container) {
+                return;
+            }
+
+            const item = popupUsers[Math.floor(Math.random() * popupUsers.length)];
+            const bubble = document.createElement("div");
+            bubble.className = "popup-item";
+            bubble.innerHTML =
+                '<div class="avatar" style="width:32px;height:32px;background-image:url(\'https://i.pravatar.cc/60?img=' + item.avatarId + '\');"></div>' +
+                "<div><strong>" + item.name + "</strong> " + item.msg + "</div>";
+            container.appendChild(bubble);
+
+            window.setTimeout(function () {
+                bubble.remove();
+            }, 8000);
+        }
+
+        const autoNames = ["退休理財新手", "基金研究生", "阿凱", "Yuki", "Chris", "上班族小林", "配置觀察者"];
+        const autoMsgs = [
+            "剛領到完整版，整理很完整",
+            "這份筆記把基金跟退休配置關係講清楚了",
+            "加入後很快就收到內容",
+            "希望後續還有市場更新",
+            "定期定額那段很有感"
+        ];
+        function escapeHtml(text) {
+            return String(text).replace(/[&<>"]/g, function (char) {
+                if (char === "&") return "&amp;";
+                if (char === "<") return "&lt;";
+                if (char === ">") return "&gt;";
+                return "&quot;";
+            });
+        }
+
+        function autoAddComment() {
+            const commentList = document.getElementById("comment-list");
+            if (!commentList) {
+                return;
+            }
+
+            const name = autoNames[Math.floor(Math.random() * autoNames.length)];
+            const msg = autoMsgs[Math.floor(Math.random() * autoMsgs.length)];
+            const avatarId = Math.floor(Math.random() * 70) + 1;
+            const newDiv = document.createElement("div");
+            newDiv.className = "comment";
+            newDiv.innerHTML =
+                '<div class="avatar" style="background-image:url(\'https://i.pravatar.cc/60?img=' + avatarId + '\');"></div>' +
+                '<div class="comment-body"><div class="comment-name">' + escapeHtml(name) + "</div>" +
+                escapeHtml(msg) +
+                '<div class="comment-like">👍 ' + (Math.floor(Math.random() * 40) + 10) + "</div>" +
+                '<div class="comment-time">剛剛</div></div>';
+            commentList.appendChild(newDiv);
+
+            if (commentList.children.length > 30) {
+                commentList.removeChild(commentList.children[0]);
+            }
+        }
+
+        let modal = null;
+        let modalTimer = null;
+        let scrollTriggered = false;
+
+        function showModal() {
+            if (modal && modal.style.display !== "flex") {
+                modal.style.display = "flex";
+            }
+        }
+
+        function hideModal() {
+            if (!modal) {
+                return;
+            }
+            modal.style.display = "none";
+            if (modalTimer) {
+                clearTimeout(modalTimer);
+            }
+            modalTimer = window.setTimeout(function () {
+                if (modal && modal.style.display !== "flex") {
+                    showModal();
+                }
+            }, 13000);
+        }
+
+        function submitUserComment() {
+            const input = document.getElementById("commentInput");
+            const commentList = document.getElementById("comment-list");
+            const text = input ? input.value.trim() : "";
+            if (!text || !commentList) {
+                return;
+            }
+
+            const newDiv = document.createElement("div");
+            newDiv.className = "comment";
+            newDiv.innerHTML =
+                '<div class="avatar" style="background-image:url(\'https://i.pravatar.cc/60?img=32\');"></div>' +
+                '<div class="comment-body"><div class="comment-name">您</div>' + escapeHtml(text) +
+                '<div class="comment-time">剛剛</div><div class="comment-like">👍 1</div></div>';
+            commentList.appendChild(newDiv);
+            input.value = "";
+
+            window.setTimeout(function () {
+                const reply = document.createElement("div");
+                reply.className = "comment";
+                reply.innerHTML =
+                    '<div class="avatar" style="background-image:url(\'./static/picture/touxiang.png\'); background-size:cover; background-position:center;"></div>' +
+                    '<div class="comment-body"><div class="comment-name"><span style="color:#0f2f63;">盧燕俐理財團隊</span>' +
+                    '<span style="background:#e0ecff; font-size:10px; padding:2px 6px; border-radius:20px;">官方回覆</span></div>' +
+                    '感謝留言，歡迎直接加 LINE 領取完整筆記，祝你建立更穩定的基金理財節奏。' +
+                    '<div class="comment-time">剛剛</div></div>';
+                commentList.appendChild(reply);
+            }, 1100);
+
+            showModal();
+        }
+
+        function init() {
+            bindButtons();
+            initCountdown();
+            updateCounter();
+            window.setInterval(updateCounter, 5000);
+            window.setInterval(showRandomBubble, 4800);
+            window.setTimeout(showRandomBubble, 1200);
+            window.setInterval(autoAddComment, 9000);
+            window.setTimeout(function () {
+                autoAddComment();
+                autoAddComment();
+            }, 1800);
+
+            const sendBtn = document.getElementById("sendCommentBtn");
+            const commentInput = document.getElementById("commentInput");
+            if (sendBtn) {
+                sendBtn.addEventListener("click", submitUserComment);
+            }
+            if (commentInput) {
+                commentInput.addEventListener("keypress", function (event) {
+                    if (event.key === "Enter") {
+                        submitUserComment();
+                    }
+                });
+            }
+
+            modal = document.getElementById("modal");
+            if (modal) {
+                modal.addEventListener("click", function (event) {
+                    if (event.target === modal) {
+                        hideModal();
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", function () {
+                if (scrollTriggered) {
+                    return;
+                }
+                const denominator = document.body.scrollHeight - window.innerHeight;
+                const percent = denominator > 0 ? window.scrollY / denominator : 0;
+                if (percent > 0.62) {
+                    showModal();
+                    scrollTriggered = true;
+                }
+            }, { passive: true });
+
+            const observer = new MutationObserver(function () {
+                bindButtons();
+            });
+            observer.observe(document.body, { childList: true, subtree: true });
+        }
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", init);
+        } else {
+            init();
+        }
+    })();
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"ab8ad31f048b4554ac85f163967f12de","r":1}' crossorigin="anonymous"></script>
 </body>
 </html>
